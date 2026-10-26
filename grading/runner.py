@@ -204,7 +204,7 @@ class GradingRunner:
         Run tests and return results. Override this for custom logic.
 
         Success requires a real pass: JUnit must show at least one test, zero
-        failures, zero errors, and zero skips. Exit code alone is not enough —
+        failures, zero errors, and zero skips. Exit code alone is not enough:
         an agent can force exit 0 from conftest while every assertion still fails.
         """
         junit_path = Path(self.working_dir) / f".hud-junit-{uuid.uuid4().hex}.xml"
